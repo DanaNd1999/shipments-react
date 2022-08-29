@@ -22,29 +22,32 @@ const Register = () => {
     <div className="container align-items-center">
       <h1 className="mt-5">Register!</h1>
       <form className="mt-3 mb-3" onSubmit={register}>
-        <div className="mb-3" controlId="formBasicEmail">
+        <div className="form-group mb-3">
           <label>Name</label>
           <input
             type="text"
             placeholder="Enter name"
             onChange={(e) => setName(e.target.value)}
+            className="form-control"
           />
         </div>
-        <div className="mb-3" controlId="formBasicEmail">
+        <div className="form-group mb-3" controlId="formBasicEmail">
           <label>Email address</label>
           <input
             type="email"
             placeholder="Enter email"
             onChange={(e) => setEmail(e.target.value)}
+            className="form-control"
           />
         </div>
 
-        <div className="mb-3" controlId="formBasicPassword">
+        <div className="form-group mb-3">
           <label>Password</label>
           <input
             type="password"
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
+            className="form-control"
           />
         </div>
         <button

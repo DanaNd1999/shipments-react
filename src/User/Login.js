@@ -21,24 +21,26 @@ const Login = () => {
   return (
     <div className="container align-items-center">
       <h1 className="mt-5">Login!</h1>
-      <Form className="mt-3 mb-3">
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
+      <form className="mt-3 mb-3">
+        <div className="form-group mb-3">
+          <label>Email address</label>
+          <input
             type="email"
             placeholder="Enter email"
             onChange={(e) => setEmail(e.target.value)}
+            className="form-control"
           />
-        </Form.Group>
+        </div>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
+        <div className="form-group mb-3">
+          <label>Password</label>
+          <input
             type="password"
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
+            className="form-control"
           />
-        </Form.Group>
+        </div>
         <Button
           onClick={login}
           onCvariant="primary"
@@ -51,7 +53,7 @@ const Login = () => {
         <p className="mt-2">
           Don't have an account? <Link to={"/register"}>Sign Up</Link>
         </p>
-      </Form>
+      </form>
     </div>
   );
 };

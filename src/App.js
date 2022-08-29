@@ -10,8 +10,14 @@ import Register from "./User/Register";
 
 const App = () => {
   const { getToken, token, logout } = AuthUser();
+
   if (!getToken()) {
-    return <Login />;
+    return (
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="register" element={<Register />} />
+      </Routes>
+    );
   }
   const logoutUser = () => {
     if (token != undefined) {
